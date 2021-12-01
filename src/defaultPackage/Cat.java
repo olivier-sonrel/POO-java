@@ -9,7 +9,8 @@ public class Cat extends Creature{
                Float size,
                Float weight,
                Date birthday,
-               Gender gender) {
+               Gender gender
+    ) {
         super(firstname,
                 lastname,
                 size,

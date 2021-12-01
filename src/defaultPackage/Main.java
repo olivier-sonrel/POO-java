@@ -16,6 +16,8 @@ public class Main {
                 Gender.FEMALE
         );
         Person myPerson = new Person(
+                "machin@machine.com",
+                "tout la bas",
                 "per",
                 "zob",
                 1021F,

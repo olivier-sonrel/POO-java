@@ -2,8 +2,13 @@ package defaultPackage;
 
 import java.util.Date;
 
-public class Person extends Creature{
-    public Person(String firstname,
+public class Person extends Creature {
+    private String mail;
+    private String address;
+
+    public Person(String mail,
+                  String address,
+                  String firstname,
                   String lastname,
                   Float size,
                   Float weight,
@@ -17,6 +22,22 @@ public class Person extends Creature{
                 birthday,
                 gender
         );
+        this.mail = mail;
+        this.address = address;
+    }
+
+    public void setMail(String mail){
+        this.mail = mail;
+    }
+    public String getMail() {
+        return this.mail;
+    }
+
+    public void setAddress(String address){
+        this.address = address;
+    }
+    public String getAddress() {
+        return this.address;
     }
 
     @Override
