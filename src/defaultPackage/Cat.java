@@ -26,6 +26,11 @@ public class Cat extends Creature{
                 ' ' +
                 this.getLastname() +
                 ", i'am a " +
-                this.getSpecies();
+                this.getSpecies() +
+                this.getBirthday().toString() +
+                this.getSize().toString() +/*TODO pas le bon toString*/
+                this.getWeight().toString() +/*TODO pas le bon toString*/
+                this.getGender().toString()
+                ;
     }
 }

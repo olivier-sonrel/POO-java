@@ -10,8 +10,8 @@ public class Main {
         Cat myCat = new Cat(
                 "cat",
                 "zoub",
-                1021F,
-                325F,
+                10.21F,
+                3.25F,
                 new Date(),
                 Gender.FEMALE
         );
@@ -20,8 +20,8 @@ public class Main {
                 "tout la bas",
                 "per",
                 "zob",
-                1021F,
-                325F,
+                10.21F,
+                3.25F,
                 new Date(),
                 Gender.MALE
         );

@@ -49,10 +49,10 @@ public class Person extends Creature {
                 this.getSpecies() +
                 this.getAddress() +
                 this.getMail() +
-                this.getBirthday() +
-                this.getSize() +
-                this.getWeight() +
-                this.getGender()
+                this.getBirthday().toString() +
+                this.getSize().toString() +/*TODO pas le bon toString*/
+                this.getWeight().toString() +/*TODO pas le bon toString*/
+                this.getGender().toString()
                 ;
     }
 }
