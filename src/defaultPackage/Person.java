@@ -46,6 +46,13 @@ public class Person extends Creature {
                 ' ' +
                 this.getLastname() +
                 ", i'am a " +
-                this.getSpecies();
+                this.getSpecies() +
+                this.getAddress() +
+                this.getMail() +
+                this.getBirthday() +
+                this.getSize() +
+                this.getWeight() +
+                this.getGender()
+                ;
     }
 }
