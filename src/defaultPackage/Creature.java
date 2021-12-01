@@ -49,6 +49,6 @@ public abstract class Creature implements Species{
     }
 
     public String getSpecies() {
-        return "species";
+        return this.getClass().getSimpleName();
     }
 }

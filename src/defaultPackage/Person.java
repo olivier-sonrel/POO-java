@@ -25,6 +25,6 @@ public class Person extends Creature{
                 ' ' +
                 this.getLastname() +
                 ", i'am a " +
-                this.getClass().getSimpleName();
+                this.getSpecies();
     }
 }
