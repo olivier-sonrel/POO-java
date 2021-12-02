@@ -28,6 +28,8 @@ public abstract class Creature implements Species{
     public Creature() {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println(("Hi buddy tell m who you are?"));
+
         System.out.println(("Tell me your firstname?"));
         this.firstname = scanner.nextLine();
         System.out.println(this.firstname);
@@ -44,8 +46,8 @@ public abstract class Creature implements Species{
         this.weight = scanner.nextFloat();
         System.out.println(this.weight);
 
-        this.birthday = new Date();
-        this.gender = Gender.FEMALE;
+        this.birthday = new Date(); /* TODO DATe */
+        this.gender = Gender.FEMALE; /* TODO Gender */
     }
 
     public String getFirstname() {

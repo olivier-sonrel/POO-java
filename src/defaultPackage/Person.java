@@ -2,6 +2,7 @@ package defaultPackage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Person extends Creature {
     private String mail;
@@ -25,6 +26,20 @@ public class Person extends Creature {
         );
         this.mail = mail;
         this.address = address;
+    }
+
+    public Person() {
+        super();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(("Tell me your firstname?"));
+        this.mail = scanner.nextLine();
+        System.out.println(this.mail);
+
+        System.out.println(("Tell me your lastname?"));
+        this.address = scanner.nextLine();
+        System.out.println(this.address);
     }
 
     public void setMail(String mail){

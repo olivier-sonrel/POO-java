@@ -29,17 +29,13 @@ public class Main {
                 Gender.MALE
         );
 
-        System.out.println(("Hi buddy tell m who you are?"));
+        System.out.println(("Hi there..."));
 
-        Cat registerCat = new Cat();
-
-
-
-
-        /* TODO Cat.Register */
+        /*Cat registerCat = new Cat();*/
+        Person registerPerson = new Person();
 
         System.out.println(myCat);
         System.out.println(myPerson);
-        System.out.println(registerCat);
+        System.out.println(registerPerson);
     }
 }
