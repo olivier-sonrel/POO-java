@@ -9,8 +9,7 @@ public class Main {
 
     public static void main (String[] args) {
 
-
-/*        Cat myCat = new Cat(
+        Cat myCat = new Cat(
                 "cat",
                 "zoub",
                 10.21F,
@@ -27,15 +26,19 @@ public class Main {
                 3.25F,
                 new Date(),
                 Gender.MALE
-        );*/
+        );
 
         System.out.println(("Hi there..."));
+        System.out.println(myCat);
+        System.out.println(myPerson);
 
-        /*Cat registerCat = new Cat();*/
+        System.out.println(("Register as a cat :"));
+        Cat registerCat = new Cat();
+
+        System.out.println(("Register as a person :"));
         Person registerPerson = new Person();
 
-/*        System.out.println(myCat);
-        System.out.println(myPerson);*/
+        System.out.println(registerCat);
         System.out.println(registerPerson);
     }
 }
