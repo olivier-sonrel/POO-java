@@ -24,13 +24,6 @@ public class Cat extends Creature{
     @Override
     public String toString() {
 
-        String lookingPartner = " every gender are good for me, i'm open ;-)";
-        switch (this.getGender()){
-            case MALE ->  lookingPartner = "a female.";
-            case FEMALE -> lookingPartner = "a male.";
-            case HERMAPHRODITE -> lookingPartner = "i will take everything i'm kind of adaptable :-)";
-        }
-
         SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
         String strDate = formatter.format(this.getBirthday());
 
@@ -46,7 +39,7 @@ public class Cat extends Creature{
                 " kg of good meat, watching the world from the altitude of " +
                 this.getSize().toString() +
                 " looking for " +
-                lookingPartner
+                this.getGender().lookingPartner()
                 ;
     }
 }
