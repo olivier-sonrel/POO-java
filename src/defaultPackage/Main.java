@@ -1,17 +1,15 @@
 package defaultPackage;
 
-import java.util.Arrays;
 import java.util.Date;
-import java.util.Scanner;
 
 public class Main {
-    private static Object Person;
 
     public static void main (String[] args) {
 
         Cat myCat = new Cat(
                 "cat",
                 "zoub",
+                "De Gouttière, with a matricule",
                 10.21F,
                 3.25F,
                 new Date(),

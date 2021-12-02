@@ -5,8 +5,8 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Person extends Creature {
-    private String mail;
-    private String address;
+    private final String mail;
+    private final String address;
 
     public Person(String mail,
                   String address,
@@ -42,16 +42,10 @@ public class Person extends Creature {
         System.out.println(this.address);
     }
 
-    public void setMail(String mail){
-        this.mail = mail;
-    }
     public String getMail() {
         return this.mail;
     }
 
-    public void setAddress(String address){
-        this.address = address;
-    }
     public String getAddress() {
         return this.address;
     }
@@ -62,13 +56,13 @@ public class Person extends Creature {
         SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
         String strDate = formatter.format(this.getBirthday());
 
-        String newligne = System.getProperty("line.separator");
+        String newLine = System.getProperty("line.separator");
 
         return this.getFirstname() +
                 " " +
                 this.getLastname() +
-                ", i'am a " +
-                this.getSpecies() +
+                ", i'm a " +
+                this.getClass().getSimpleName() +
                 " born in the year of our Lord " +
                 strDate +
                 " , made of " +
@@ -77,7 +71,7 @@ public class Person extends Creature {
                 this.getSize().toString() +
                 " looking for " +
                 this.getGender().lookingPartner() +
-                newligne +
+                newLine +
                 "If yo are one of this,  mail me there : " +
                 this.getMail() +
                 " or just come to here my door is open " +
