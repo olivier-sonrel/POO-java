@@ -33,11 +33,11 @@ public class Person extends Creature {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println(("Tell me your firstname?"));
+        System.out.println(("Tell me your mail?"));
         this.mail = scanner.nextLine();
         System.out.println(this.mail);
 
-        System.out.println(("Tell me your lastname?"));
+        System.out.println(("Tell me your address?"));
         this.address = scanner.nextLine();
         System.out.println(this.address);
     }
