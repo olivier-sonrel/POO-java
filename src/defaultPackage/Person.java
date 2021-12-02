@@ -1,5 +1,6 @@
 package defaultPackage;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Person extends Creature {
@@ -42,17 +43,31 @@ public class Person extends Creature {
 
     @Override
     public String toString() {
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
+        String strDate = formatter.format(this.getBirthday());
+
+        String newligne = System.getProperty("line.separator");
+
         return this.getFirstname() +
-                ' ' +
+                " " +
                 this.getLastname() +
                 ", i'am a " +
                 this.getSpecies() +
-                this.getAddress() +
+                " born in the year of our Lord " +
+                strDate +
+                " , made of " +
+                this.getWeight().toString() +
+                " kg of good meat, watching the world from the altitude of " +
+                this.getSize().toString() +
+                " looking for " +
+                this.getGender().lookingPartner() +
+                newligne +
+                "If yo are one of this,  mail me there : " +
                 this.getMail() +
-                this.getBirthday().toString() +
-                this.getSize().toString() +/*TODO pas le bon toString*/
-                this.getWeight().toString() +/*TODO pas le bon toString*/
-                this.getGender().toString()
+                " or just come to here my door is open " +
+                this.getAddress() +
+                " ;-)"
                 ;
     }
 }
