@@ -1,6 +1,7 @@
 package defaultPackage;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public abstract class Creature implements Species{
     private String firstname;
@@ -22,6 +23,29 @@ public abstract class Creature implements Species{
         this.weight = weight;
         this.birthday = birthday;
         this.gender = gender;
+    }
+
+    public Creature() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(("Tell me your firstname?"));
+        this.firstname = scanner.nextLine();
+        System.out.println(this.firstname);
+
+        System.out.println(("Tell me your lastname?"));
+        this.lastname = scanner.nextLine();
+        System.out.println(this.lastname);
+
+        System.out.println(("Tell me your size small tiny creature?"));
+        this.size = scanner.nextFloat();
+        System.out.println(this.size);
+
+        System.out.println(("How much meat there is on you?"));
+        this.weight = scanner.nextFloat();
+        System.out.println(this.weight);
+
+        this.birthday = new Date();
+        this.gender = Gender.FEMALE;
     }
 
     public String getFirstname() {

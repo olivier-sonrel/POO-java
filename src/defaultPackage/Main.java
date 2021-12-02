@@ -2,11 +2,14 @@ package defaultPackage;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     private static Object Person;
 
     public static void main (String[] args) {
+
+
         Cat myCat = new Cat(
                 "cat",
                 "zoub",
@@ -26,10 +29,17 @@ public class Main {
                 Gender.MALE
         );
 
-        System.out.println(("Hello World!!"));
-        Gender[] genders = Gender.class.getEnumConstants();
-        System.out.println(Arrays.toString(genders));
+        System.out.println(("Hi buddy tell m who you are?"));
+
+        Cat registerCat = new Cat();
+
+
+
+
+        /* TODO Cat.Register */
+
         System.out.println(myCat);
         System.out.println(myPerson);
+        System.out.println(registerCat);
     }
 }

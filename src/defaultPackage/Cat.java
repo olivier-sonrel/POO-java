@@ -2,6 +2,7 @@ package defaultPackage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Cat extends Creature{
 
@@ -19,6 +20,10 @@ public class Cat extends Creature{
                 birthday,
                 gender
         );
+    }
+
+    public Cat(){
+        super();
     }
 
     @Override
