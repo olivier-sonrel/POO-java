@@ -62,11 +62,13 @@ public abstract class Creature implements Species{
         }
         System.out.println(this.birthday);
 
-        /* TODO Gender */
-        Gender[] genders = Gender.values();
-        System.out.println((Arrays.toString(genders)));
-
-        this.gender = Gender.FEMALE;
+        System.out.println("Say me who you are, i gonna say you what you looking for : " + (Arrays.toString(Gender.values())));
+        try{
+           this.gender = Gender.valueOf(scanner.next().toUpperCase(Locale.ROOT));
+        }catch (IllegalCallerException e){
+            System.out.println("i think you wrote it wrong, let say you are none of it");
+            this.gender = Gender.SEXLESS;
+        }
     }
 
     public String getFirstname() {
