@@ -10,7 +10,7 @@ public class Main {
     public static void main (String[] args) {
 
 
-        Cat myCat = new Cat(
+/*        Cat myCat = new Cat(
                 "cat",
                 "zoub",
                 10.21F,
@@ -27,15 +27,15 @@ public class Main {
                 3.25F,
                 new Date(),
                 Gender.MALE
-        );
+        );*/
 
         System.out.println(("Hi there..."));
 
         /*Cat registerCat = new Cat();*/
         Person registerPerson = new Person();
 
-        System.out.println(myCat);
-        System.out.println(myPerson);
+/*        System.out.println(myCat);
+        System.out.println(myPerson);*/
         System.out.println(registerPerson);
     }
 }

@@ -1,6 +1,10 @@
 package defaultPackage;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 public abstract class Creature implements Species{
@@ -27,8 +31,9 @@ public abstract class Creature implements Species{
 
     public Creature() {
         Scanner scanner = new Scanner(System.in);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
 
-        System.out.println(("Hi buddy tell m who you are?"));
+        System.out.println(("Hi buddy tell me who you are?"));
 
         System.out.println(("Tell me your firstname?"));
         this.firstname = scanner.nextLine();
@@ -46,8 +51,22 @@ public abstract class Creature implements Species{
         this.weight = scanner.nextFloat();
         System.out.println(this.weight);
 
-        this.birthday = new Date(); /* TODO DATe */
-        this.gender = Gender.FEMALE; /* TODO Gender */
+        System.out.println(("When did you come in this tiny world, creature? (format '14-Jun-2000')"));
+        String stringDate = scanner.next();
+        try {
+            this.birthday = formatter.parse(stringDate);
+        }
+        catch (Exception e){
+            this.birthday = new Date();
+            System.out.println("i think you wrote it wrong we register the current time then.");
+        }
+        System.out.println(this.birthday);
+
+        /* TODO Gender */
+        Gender[] genders = Gender.values();
+        System.out.println((Arrays.toString(genders)));
+
+        this.gender = Gender.FEMALE;
     }
 
     public String getFirstname() {
