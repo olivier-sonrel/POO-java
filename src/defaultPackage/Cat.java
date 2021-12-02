@@ -45,9 +45,9 @@ public class Cat extends Creature implements Species{
         SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
         String strDate = formatter.format(this.getBirthday());
 
-        return this.getFirstname() +
+        return this.getFirstname().toUpperCase() +
                 " " +
-                this.getLastname() +
+                this.getLastname().toUpperCase() +
                 ", i'am a " +
                 this.getClass().getSimpleName() +
                 " of species : " +

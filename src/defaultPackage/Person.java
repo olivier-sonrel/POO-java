@@ -2,6 +2,7 @@ package defaultPackage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Person extends Creature {
@@ -58,9 +59,9 @@ public class Person extends Creature {
 
         String newLine = System.getProperty("line.separator");
 
-        return this.getFirstname() +
+        return this.getFirstname().toUpperCase() +
                 " " +
-                this.getLastname() +
+                this.getLastname().toUpperCase() +
                 ", i'm a " +
                 this.getClass().getSimpleName() +
                 " born in the year of our Lord " +
@@ -74,9 +75,9 @@ public class Person extends Creature {
                 newLine +
                 "If yo are one of this,  mail me there : " +
                 this.getMail() +
-                " or just come to here my door is open " +
+                ", or just come to here : " +
                 this.getAddress() +
-                " ;-)"
+                " my door is open, we gonna have fun with the RGPD"
                 ;
     }
 }
