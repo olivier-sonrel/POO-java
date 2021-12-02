@@ -4,10 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Cat extends Creature{
+public class Cat extends Creature implements Species{
+    private final String species;
 
     public Cat(String firstname,
                String lastname,
+               String species,
                Float size,
                Float weight,
                Date birthday,
@@ -20,10 +22,21 @@ public class Cat extends Creature{
                 birthday,
                 gender
         );
+        this.species = species;
     }
 
     public Cat(){
         super();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(("Tell me your species?"));
+        this.species = scanner.nextLine();
+        System.out.println(this.species);
+    }
+
+    public String getSpecies() {
+        return this.species;
     }
 
     @Override
@@ -36,8 +49,10 @@ public class Cat extends Creature{
                 " " +
                 this.getLastname() +
                 ", i'am a " +
+                this.getClass().getSimpleName() +
+                " of species : " +
                 this.getSpecies() +
-                " born in the year of our Lord " +
+                ", born in the year of our Lord " +
                 strDate +
                 " , made of " +
                 this.getWeight().toString() +
